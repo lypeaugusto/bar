@@ -1,38 +1,84 @@
-*{
+* {
     margin: 0px;
     padding: 0px;
     font-family: Arial, Helvetica, sans-serif;
 }
-body{background-color: wheat;}
-hr{color: red;}
-header{ font-size: 20px;
-    display: flex;
-    align-items: center;
-    gap: 20%;
+
+body {
+    background-color: wheat;
 }
-menu{ display: flex;
-    gap: 300px;
+
+hr {
+    color: red;
+}
+
+header {
+    font-size: 20px;
+    display: flex;
+    flex-direction: row; /* Adjust for mobile layout */
+    align-items: center;
+    text-align: center; /* Center text in mobile layout */
+    margin: auto;
+}
+
+menu {
+    display: flex;
+    flex-direction: row; /* Adjust for mobile layout */
+    gap: 200px; /* Adjust gap for mobile layout */
+    margin: auto;
+}
+#itens{
+        display: none;
     
 }
 
-a{text-decoration: none;
-color: red;}
-a:hover{
-    color:black
+a {
+    text-decoration: none;
+    color: red;
 }
 
-img{ padding: 10px;
+a:hover {
+    color: black;
+}
+
+img {
+    padding: 10px;
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
-footer{
-    
-    display:flex;
-    gap: 20px;
-    align-items: center;
 
-}
-div{display: flex;
+footer {
+    display: flex;
+    flex-direction: row;
+     /* Adjust for mobile layout */
+    gap: 10px; /* Adjust gap for mobile layout */
     align-items: center;
+}
+
+div {
+    display: flex;
+    align-items: center;
+}
+
+/* Media Query for Mobile */
+@media screen and (max-width: 600px) {
+    menu{display: none;}
+    #itens{
+        display: block;
+        color: red;
+    
+}
+#itens:hover{
+    cursor: pointer;
+    color: black;
+}
+    header, menu, footer {
+        gap: 5px; /* Adjust gap for smaller screens */flex-direction: column;
+    }
+
+    img {
+        width: 80px; /* Adjust image size for smaller screens */
+        height: 80px;
+    }
 }
